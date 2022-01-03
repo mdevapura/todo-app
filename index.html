@@ -5,13 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Todo app</title>
 
 </head>
 <body>
 
-  Todo
+<main>
+
+  <div class="header">
+
+  <h1>To Do</h1>
+
+    <div>
+      <h4>Dark Mode</h4>
+      <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+  <input type="text" id="myInput" placeholder="Create a new todo">
+  <span onclick="newElement()" class="addbutton">Add</span>
+
+  </div>
+
+  <ul id="myUL">
+    <li class="checked">Complete online Javascript course</li>
+    <li>Jog around the park 3x </li>
+    <li>10 minutes meditation</li>
+    <li>Read for 1 hour</li>
+    <li>Pick up groceries</li>
+    <li>Complete Todo App on Frontend Mentor</li>
+  </ul>
+
+
+
+
 
   <!-- Add dynamic number --> items left
 
@@ -21,7 +52,36 @@
 
   Clear Completed
 
-  Drag and drop to reorder list
+
+
+  <script>
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+      localStorage.setItem('theme', themeName);
+      document.documentElement.className = themeName;
+    }
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+      if (localStorage.getItem('theme') === 'theme-dark'){
+        setTheme('theme-light');
+      } else {
+        setTheme('theme-dark');
+      }
+    }
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+      if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+      } else {
+        setTheme('theme-light');
+      }
+    })();
+
+  </script>
+
+
+
+</main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
