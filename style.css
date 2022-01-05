@@ -9,15 +9,39 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+h1 {
+    color: white;
+}
+
 ul {
     margin: 0;
     padding: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    transform: translate(73%, 10%);
+    width: 40%;
+
+    
 }
 
 ul li {                                 /* List item styling */
     cursor: pointer;
     position: relative;
     transition: 0.2s;
+    border-bottom: 1px solid grey;
+    display: flex;
+    background-color: var(--color-list);
+    color: var(--font-color);
+    padding: 25px 25px;
+
+}
+
+input[type=text] {                     /* Styling of input */
+    width: 40%;
+    box-sizing: border-box;
+    padding: 25px 25px;
+    background-color: var(--color-list);
 }
 
 ul li.checked {                         /* When clicked on, strikethrough text */
@@ -42,13 +66,33 @@ ul li.checked::before {                 /* Tick */
     color: white;
 }
 
+.header {
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
 
+}
 
+footer {
+    color: var(--footer-color);
+    border: 1px solid black;
 
+}
 
+.todo-toggle {                          /* Style "To Do" text and toggle */
+   display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 220px;
+    margin-right: 250px;
+}
 
-
-
+body {
+    background-color: var(--color-background);
+    background-image: var(--image-background);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+}
 
 
 
@@ -121,18 +165,18 @@ input:checked + .slider:before {
 /* -------------Theme start ---------------------*/
 
 .theme-light {
-    --color-primary: #0060df;
-    --color-secondary: hsl(0, 0%, 100%);
-    --color-accent: #fd6f53;
-    --font-color: #000000;
-    --color-background: hsl(227, 47%, 96%);
+    --color-background: hsl(0, 0%, 98%);
+    --color-list: hsl(236, 33%, 92%);
+    --font-color: hsl(235, 19%, 35%);
+    --image-background: url("images/bg-desktop-light.jpg");
+    --footer-color: hsl(236, 9%, 61%);
 }
 .theme-dark {
-    --color-primary: #17ed90;
-    --color-secondary: hsl(230, 17%, 14%);
-    --color-accent: #12cdea;
-    --font-color: #ffffff;
-    --color-background: hsl(228, 28%, 20%);
+    --color-background: hsl(235, 21%, 11%);
+    --color-list: hsl(235, 24%, 19%);
+    --font-color: hsl(234, 39%, 85%);
+    --image-background: url("images/bg-desktop-dark.jpg");
+    --footer-color: hsl(234, 39%, 85%);
 }
 
 /* ---------------- Theme end --------------------*/

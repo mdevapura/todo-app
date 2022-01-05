@@ -14,23 +14,26 @@
 
 <main>
 
-  <div class="header">
-
+  <div class="todo-toggle">
   <h1>To Do</h1>
 
-    <div>
-      <h4>Dark Mode</h4>
-      <label id="switch" class="switch">
-        <input type="checkbox" onchange="toggleTheme()" id="slider">
-        <span class="slider round"></span>
-      </label>
-    </div>
+  <div>
+    <label id="switch" class="switch">
+      <input type="checkbox" onchange="toggleTheme()" id="slider">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  </div>
 
-  <input type="text" id="myInput" placeholder="Create a new todo">
-  <span onclick="newElement()" class="addbutton">Add</span>
+  <div class="header">
+
+
+    <input type="text" id="myInput" placeholder="Create a new todo">
+    <span onclick="newElement()" class="addbutton">Add</span>
 
   </div>
 
+  <div>
   <ul id="myUL">
     <li class="checked">Complete online Javascript course</li>
     <li>Jog around the park 3x </li>
@@ -39,11 +42,11 @@
     <li>Pick up groceries</li>
     <li>Complete Todo App on Frontend Mentor</li>
   </ul>
+  </div>
 
 
 
-
-
+  <footer>
   <!-- Add dynamic number --> items left
 
   All
@@ -51,6 +54,8 @@
   Completed
 
   Clear Completed
+  </footer>
+
 
 
 
