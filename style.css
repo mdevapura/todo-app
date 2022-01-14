@@ -71,7 +71,7 @@ p.btn:hover {
 .main__container {
     width: 100vw;
     min-height: 100vh;
-    background: #FAFAFA url("../img/bg-desktop-light.jpg") no-repeat;
+    background: #FAFAFA url("../images/bg-desktop-light.jpg") no-repeat;
     background-size: contain;
     /* background-size: 100vw auto ; */
     display: flex;
@@ -81,7 +81,7 @@ p.btn:hover {
 }
 
 [data-theme="darkTheme"] .main__container {
-    background: #171823 url("../img/bg-desktop-dark.jpg") no-repeat;
+    background: #171823 url("../images/bg-desktop-dark.jpg") no-repeat;
     background-size: contain;
 }
 
@@ -249,7 +249,6 @@ p.btn:hover {
 }
 
 .todo__elem:hover > .todo__check {
-    /* background: linear-gradient(to right, #55DDFF, #C058F3);  */
     border: 1px solid #C058F3;
 }
 
@@ -357,7 +356,7 @@ footer {
     }
 
     [data-theme="darkTheme"] .main__container {
-        background: #171823 url("../img/bg-mobile-dark.jpg") no-repeat;
+        background: #171823 url("../images/bg-mobile-dark.jpg") no-repeat;
         background-size: contain;
     }
 
