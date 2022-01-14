@@ -1,96 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+          rel="icon"
+          type="img/png"
+          sizes="32x32"
+          href="./images/favicon-32x32.png"
+  />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Todo app</title>
-
+  <title>Frontend Mentor | Todo app</title>
 </head>
-<body>
+<body class="preload-transitions" data-theme="darkTheme">
+<div class="main__container">
+  <div class="todo">
+    <header class="header">
+      <section class="logo">
+        <h2 class="logo__title">TODO</h2>
+        <button class="btn btn--theme" id="theme-toggle">
+          <img class="todo__elem--hide" src="./images/icon-moon.svg" alt="moon icon to apply dark mode" />
+          <img  src="./images/icon-sun.svg" alt="sun icon to apply light mode" />
+        </button>
+      </section>
+      <div class="todo__header">
+        <div class="todo__circle">
+        </div>
+        <label for="todo-input">Create a new todo</label>
+        <input type="text" class="todo__input" name="todo-input" id="todo-input" placeholder="Create a new todo..." />
+      </div>
+    </header>
 
-<main>
+    <main class="main">
+      <ul class="todo__list" id="todo-list">
+        <!-- items added by JavaScript -->
 
-  <div class="todo-toggle">
-  <h1>To Do</h1>
+      </ul>
+      <div class="todo__filters">
+        <div class="todo__filters__sides">
+          <p class="btn"><span id="items-left">5</span> item(s) left</p>
+          <button class="btn btn--clear" id="clear-completed">Clear Completed</button>
+        </div>
+        <div class="todo__filters__center">
 
-  <div>
-    <label id="switch" class="switch">
-      <input type="checkbox" onchange="toggleTheme()" id="slider">
-      <span class="slider round"></span>
-    </label>
+          <input type="radio" name="filter" id="all" value="all" class="btn btn--bold" checked>
+          <label  class="btn btn--bold" for="all">All</label>
+
+          <input type="radio" name="filter" id="active" value="active" class="btn btn--bold">
+          <label class="btn btn--bold" for="active">Active</label>
+
+          <input type="radio" name="filter" id="completed" value="completed" class="btn btn--bold">
+          <label class="btn btn--bold" for="completed">Completed</label>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a
+                  href="https://www.frontendmentor.io?ref=challenge"
+                  target="_blank"
+          >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/el-shredders">Val G</a>.
+        </p>
+      </div>
+    </footer>
   </div>
-  </div>
-
-  <div class="header">
-
-
-    <input type="text" id="myInput" placeholder="Create a new todo">
-    <span onclick="newElement()" class="addbutton">Add</span>
-
-  </div>
-
-  <div>
-  <ul id="myUL">
-    <li class="checked">Complete online Javascript course</li>
-    <li>Jog around the park 3x </li>
-    <li>10 minutes meditation</li>
-    <li>Read for 1 hour</li>
-    <li>Pick up groceries</li>
-    <li>Complete Todo App on Frontend Mentor</li>
-  </ul>
-  </div>
-
-
-
-  <footer>
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-  </footer>
-
-
-
-
-  <script>
-    // function to set a given theme/color-scheme
-    function setTheme(themeName) {
-      localStorage.setItem('theme', themeName);
-      document.documentElement.className = themeName;
-    }
-    // function to toggle between light and dark theme
-    function toggleTheme() {
-      if (localStorage.getItem('theme') === 'theme-dark'){
-        setTheme('theme-light');
-      } else {
-        setTheme('theme-dark');
-      }
-    }
-    // Immediately invoked function to set the theme on initial load
-    (function () {
-      if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-      } else {
-        setTheme('theme-light');
-      }
-    })();
-
-  </script>
-
-
-
-</main>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Minol Devapura</a>.
-  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    let node = document.querySelector('.preload-transitions');
+    node.classList.remove('preload-transitions');
+  });
+</script>
+<script src="script.js"></script>
 </body>
 </html>
