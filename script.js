@@ -139,7 +139,7 @@ function updateActiveCount() {
 }
 
 function updateCurrentId() {
-    // need to make sure the current ID is up to date after deletion
+    // need to make sure the current ID is up-to-date after deletion
     if (!todoArray.length) {
         todoId = 0;
     } else {
@@ -147,13 +147,13 @@ function updateCurrentId() {
     }
 }
 
-/**  localSTorage functions **/
+/**  localStorage functions **/
 /******************************/
 
 function getLocalStorage() {
     //update active count in case local is empty
 
-    // if localstorage variable doesn t exists, create it
+    // if localstorage variable doesn't exist, create it
     if (localStorage.getItem(LOCAL_TODOS) === null) {
         localStorage.setItem(LOCAL_TODOS, JSON.stringify([]));
     } else if (JSON.parse(localStorage.getItem(LOCAL_TODOS)).length) {
@@ -211,7 +211,7 @@ function changeActiveStatus(elem) {
 function removeElem(element) {
     removeElemfromDom(element);
     removeFromStorage(+element.id);
-    // need to update current Id to make sure that the next element will be created with the next highest unique id
+    // need to update current ID to make sure that the next element will be created with the next highest unique id
     updateCurrentId();
     updateActiveCount();
     //in case a filter is active, we update the display of elements accordingly

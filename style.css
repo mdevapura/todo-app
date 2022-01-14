@@ -38,9 +38,6 @@ img {
     font-family: inherit;
 }
 
-
-
-
 .btn--bold {
     font-weight: bold;
 }
@@ -51,7 +48,6 @@ img {
 
 .btn:hover {
     color: #494C6B;
-    /* color: #494C6B; */
 }
 
 [data-theme="darkTheme"] .btn:hover {
@@ -71,9 +67,8 @@ p.btn:hover {
 .main__container {
     width: 100vw;
     min-height: 100vh;
-    background: #FAFAFA url("../images/bg-desktop-light.jpg") no-repeat;
+    background: #FAFAFA url("images/bg-desktop-light.jpg") no-repeat;
     background-size: contain;
-    /* background-size: 100vw auto ; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +76,7 @@ p.btn:hover {
 }
 
 [data-theme="darkTheme"] .main__container {
-    background: #171823 url("../images/bg-desktop-dark.jpg") no-repeat;
+    background: #171823 url("images/bg-desktop-dark.jpg") no-repeat;
     background-size: contain;
 }
 
